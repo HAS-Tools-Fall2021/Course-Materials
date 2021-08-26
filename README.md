@@ -8,6 +8,10 @@ The **Content** folder contains all of the reference materials and codes we will
 
 Refer to the **Forecast** repo for all information and materials relevant for the forecast Competition.
 
+Check out D2l for announcements and grades
+
+Videos also posted on D2l
+
 ____
 ## Class documents:
 - This section will be expanded throughout the course as we build class resources
