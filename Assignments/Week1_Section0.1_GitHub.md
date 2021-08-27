@@ -47,7 +47,7 @@ ___
 - *GitKraken Approach*
   - In *GitKraken* got to `File/Clone Repo`
   - Use the `Browse` button to navigate to the directory you created for the class that you want your repo cloned to.
-  - To get the `URL` open a web browser and go to the [GitHub organization](https://github.com/HAS-Tools-Fall2021) for this course, click on the `Course-Materials21 Repo` and click on the green `code` button **make sure `ssh` is underlined** as the method to be used. 
+  - To get the `URL` open a web browser and go to the [GitHub organization](https://github.com/HAS-Tools-Fall2021) for this course, click on the `Course-Materials21 Repo` and click on the green `code` button **make sure `ssh` is underlined** as the method to be used.
   - When you do this you should see a url for the repo with a clipboard symbol next to it. Click on the clipboard to copy the URL.
   - Paste this into the `URL` field in *GitKraken*
 
@@ -119,12 +119,12 @@ This week you will generate your first streamflow forecast. The rules for this f
 
 ### 3. Submit your first forecast to the competition
 - Clone the main class Forecasting repo from our course organization website [GitHub](https://github.com/HAS-Tools-Fall2021) (see instructions above and remember **DO NOT clone it inside another repo** just clone it into the directory for this class next to your others)
-- To avoid conflicts make sure your local repo is up to date before you submit your forecast. You can do by typing `git pull` from terminal inside the course  repo folder or using the bottom bar of atom to do a fetch and then pull. Refer to the training materials for more information if you forget how to do this.
+- Open the repo in GitKraken. To avoid conflicts make sure your local repo is up to date before you submit your forecast. You can do by pushing `pull` button on GitKraken.
 - Find the csv with your last name in the *forecast_entries* folder and enter your forecasts. Enter your forecasts on the row for foercast #1. A few notes:
     - Make sure you just enter numbers (i.e. enter 5 not 5 cfs)
     - Don't convert the file to an xlsx file keep it as a csv.
     - the one '1week' and '2week' refers to your forecasts for next week and the following week.  You can refer to the `forecasts_dates` files in the Forecast repo for more details.
-- Save your changes, commit them, and push your changes. Again you can do this in GitKraken or on command line.
+- Save your changes. THen in GitKraken, Stage, commit, and push your changes (see the example video for how to do this).
 
 ### 4. Submit your first forecast homework assignment
 In addition to submitting your numerical forecasts to the forecast competition you also need to submit a description of your forecast through your homework repo. This is what I will be grading for credit.
@@ -135,7 +135,7 @@ In addition to submitting your numerical forecasts to the forecast competition y
 
 - Write a few sentences describing the forecast you made and rational for making it.  Note that we aren't doing anything fancy this week so your rational can be very simple, I'm not looking for a lot of text or any external research. This is really just to practice getting files submitted on GitHub. Save your file.
 
-- When you are done `commit` and `push` your changes to upload your changes. You can do this directly in atom.
+- When you are done open yor homework repo in GitKraken and  `Stage`, `Committ`, and `Push` your changes to upload your changes.
 
 ___
 <a name="assignment2"></a>
