@@ -12,8 +12,8 @@ import os
 # %% 
 # Step 3 - Read in the file in as dataframe
 # You will need to change the filename to match what you downloaded
-filename = 'streamflow_week1.txt'
-filepath = os.path.join('data', filename)
+filename = 'streamflow_week2.txt'
+filepath = os.path.join('../data', filename)
 
 data=pd.read_table(filepath, sep = '\t', skiprows=30, 
         names=['agency_cd', 'site_no', 'datetime', 'flow', 'code']

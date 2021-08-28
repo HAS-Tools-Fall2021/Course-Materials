@@ -1,14 +1,21 @@
-# Week 2: Python setup and our first "Python" forecast
+# Week 2: Python setup and our first "Python" forecast<!-- omit in toc -->
 ____
-## Table of Contents:
-1. [ To Do List](#todo)
-1. [ Setup Instructions](#setup)
-  - [ Conda Install](#conda)
-  - [ Python environment](#environment)
-  - [ Package install](#packages)
-  - [ VS code install](#vs)
-1. [ Training Activities](#training)
-1. [ Forecast Assignment](#assignment)
+### Table of Contents<!-- omit in toc -->
+- [To Do List](#to-do-list)
+- [Setup Instructions](#setup-instructions)
+    - [1. Install Miniconda](#1-install-miniconda)
+    - [2. Make an environment for this class and activate it](#2-make-an-environment-for-this-class-and-activate-it)
+    - [3. Install our first python packages](#3-install-our-first-python-packages)
+    - [4. Install VS code](#4-install-vs-code)
+    - [5. Setup VS Code:](#5-setup-vs-code)
+- [Required Training Activities](#required-training-activities)
+- [Optional -- but highly recommended -- training activities](#optional----but-highly-recommended----training-activities)
+- [Assignment 2: First Python Forecast](#assignment-2-first-python-forecast)
+    - [1. Download the stream gauge observations to your homework repo](#1-download-the-stream-gauge-observations-to-your-homework-repo)
+  - [2. Copy the starter code for this week into your homework repos](#2-copy-the-starter-code-for-this-week-into-your-homework-repos)
+  - [3. Use the python script to explore the data](#3-use-the-python-script-to-explore-the-data)
+  - [4. Submit your forecast to the competition](#4-submit-your-forecast-to-the-competition)
+  - [5. Submit your forecast homework assignment](#5-submit-your-forecast-homework-assignment)
 
 ___
 <a name="todo"></a>
@@ -18,7 +25,6 @@ ___
 4. Submit your second streamflow forecast and assignment by **noon on Monday** following the instructions in the [ Forecast Assignment](#assignment).
 
 ___
-<a name="setup"></a>
 ## Setup Instructions
 
 #### 1. Install Miniconda
@@ -146,7 +152,6 @@ See this video for a walkthrough of VSCode setup.
      - If something went wrong, you'll find a message such as: `bash: conda: command not found`. Try to start at step 1 again.
 
 ___
-<a name="training"></a>
 ## Required Training Activities
 - Work through the following sections of Intro to Earth Data Science covering python fundamentals and Python Environments.
   - Read [Chapter 4 Lesson 1](https://www.earthdatascience.org/courses/intro-to-earth-data-science/python-code-fundamentals/get-started-using-python/) About Python
@@ -160,11 +165,10 @@ ___
   - [Using terminal in VS code](https://code.visualstudio.com/docs/editor/integrated-terminal)
 
 ___
-<a name="assignment"></a>
 ## Assignment 2: First Python Forecast
 This week you will generate your first streamflow forecast using Python. The rules for this forecast are very similar to last week, no complicated mathematical operations. You are simply going to look at the data and make your best guess forecast  based on whatever logic you want (I repeat no calculations, just your own intuition!). The only difference between this week and last is that you will be using Python to look at the data rather than excel.
 
-*You can follow along with* this **[video](https://arizona.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5f51c781-dc73-46b8-ac43-ad92011c95eb&start=2)** *to see me walk through the steps.*
+*You can follow along with* this **[video](https://arizona.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bb9ed6ee-a9cb-493f-969a-ad920138550a&start=2)** *to see me walk through the steps.*
 
 #### 1. Download the stream gauge observations to your homework repo
 Note that even though you did this last week you are probably going to want to do it again so you can have the most up to date information.
@@ -174,13 +178,13 @@ You can use the USGS [mapper](https://maps.waterdata.usgs.gov/mapper/) as last t
    - End date = Today
    - Select 'tab separated'
 
-- The data will load in a new tab of your browser. Right click and save it as a *streamflow_week2.txt* file in the *data* folder of your **homework repo**.
+- The data will load in a new tab of your browser. Right click and save it as a `streamflow_week2.txt` file in the `data` folder of your **homework repo**.
 
 ### 2. Copy the starter code for this week into your homework repos
 For the first python assignment I'm providing you with the python code that you will need. You can start from mine and just adjust the slicing to look at or plot different parts of the data as you want. No additional coding required this week!
 - Update your course materials repo to get the latest starter code.
 - Create a folder called `assignment_2` in your homework repo
-- Copy *week2_firstpython.py* from the `Content/Starter_Codes` folder to the folder you just made in your homework repo. (**REMEMBER:** You cannot push changes to the course materials repo so make sure to do your work in your own homework repo).
+- Copy `week2_firstpython.py` from the `Content/Starter_Codes` folder to the folder you just made in your homework repo. (**REMEMBER:** You cannot push changes to the course materials repo so make sure to do your work in your own homework repo).
 
 ### 3. Use the python script to explore the data
 - Open the python script in VS code and run it interactively so that you can inspect the data.
@@ -188,7 +192,7 @@ For the first python assignment I'm providing you with the python code that you 
 
 ### 4. Submit your forecast to the competition
 - To avoid conflicts make sure your local forecasting repo is up to date before you submit your forecast. You can do this using the `pull` button in GitKraken. Refer to the training materials for more information if you forget how to do this.
-- Find the csv with your last name in the *forecast_entries* folder and enter your forecasts. Enter your forecasts on the row for foercast #2. A few notes:
+- Find the csv with your last name in the `forecast_entries` folder and enter your forecasts. Enter your forecasts on the row for foercast #2. A few notes:
     - Make sure you just enter numbers (i.e. enter 5 not 5 cfs)
     - Don't convert the file to an xlsx file keep it as a csv.
     - the one '1week' and '2week' refers to your forecasts for next week and the following week.
