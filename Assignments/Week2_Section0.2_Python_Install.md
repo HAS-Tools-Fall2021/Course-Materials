@@ -104,51 +104,53 @@ See this video for a walkthrough of VSCode setup.
   1. Install extensions: There is a large marketplace of VSCode extensions and a million ways you can customize your environment. For now though we will just start with two extensions. To install and extension go to `view > extensions` on the dropdown menu or choose extensions from your panel on the left. Once there you can search for the extensions you want to install.
     - First search for 'python'. You want the main one that comes up. It looks like this:
     ![](assets/Week2_Section0.2_Python_Install-7427ccbd.png)
-    Click `install` to install
-    - Next search for `Markdown All In One` and install it.  
+    
+      - Click `install` to install
+  
+     - Next search for `Markdown All In One` and install it.  
 
   2. Use `File Open` to open your directory for this class that has all of your repos.  You should see a file list on the left where you can easily explore all of your files now. If it asks you if you trust the authors, say yes.
 
   3. Next we will set our python environment
-    - Type `Command + Shift + P` (apple) or `Ctrl + Shift + P`(windows) to pull up the command pallet
-    - Type `Python: Select Interpreter` into the command pallet dialog (NOTE: once you start typing it should give you a list to choose from so you don't have to type the whole thing)
-    - Choose the `hastools` conda environment you created earlier
-    - If this is  done correctly you should see your python environment in the bottom left corner of your vs code window like this:
+     - Type `Command + Shift + P` (apple) or `Ctrl + Shift + P`(windows) to pull up the command pallet
+     - Type `Python: Select Interpreter` into the command pallet dialog (NOTE: once you start typing it should give you a list to choose from so you don't have to type the whole thing)
+     - Choose the `hastools` conda environment you created earlier
+     - If this is  done correctly you should see your python environment in the bottom left corner of your vs code window like this:
     ![](assets/Week2_Python_Install-376f5919.png)
 
   4. At this point you should  try running a python script.
-    - From your folder list double click to open `week2_hello_world.py`
-    - Click on the `run_cell` button at the top of the script to run it
+  - From your folder list double click to open `week2_hello_world.py`
+  - Click on the `run_cell` button at the top of the script to run it
     ![](assets/Week2_Section0.2_Python_Install-a326e0bd.png)
-    - Note: when you try to run a script using Python Interactive in VSCode for the first time, you will be prompted in a dialog box to download IPyKernal say yes to this.
-    - If the code runs correctly you should have an interactive window that opens up and looks something like this:
+  - Note: when you try to run a script using Python Interactive in VSCode for the first time, you will be prompted in a dialog box to download IPyKernal say yes to this.
+  - If the code runs correctly you should have an interactive window that opens up and looks something like this:
     ![](assets/Week2_Section0.2_Python_Install-36cf60bf.png)
 
-    - If you are unable to download IPyKernal see instructions below
+  - If you are unable to download IPyKernal see instructions below
 
   5. If you want to be able to automatically run lines without copying and pasting every time (which is very helpful!). Do the following:
-    - In VSCode go to: File  >  Preferences  >  Settings
-    - At the top, type in the Search settings bar: 'send selection'
-    - Check the check box called 'Python > Data Science: Send Selection To Interactive Window'
-    - To test if it works just highlight the `Print('hello_world')` from the editor and hit `shift+enter` and it will should automatically in your interactive window.
+  - In VSCode go to: `File  >  Preferences  >  Settings`
+  - At the top, Search settings bar type: `send selection`
+  - Check the check box called somethin `Jupyter: Send Selection To Interactive Window`
+  - To test if it works just highlight the `Print('hello_world')` from the editor and hit `shift+enter` and it will should automatically in your interactive window.
 
    4.b Fix for issue installing IpyKernal (skip if step 4 worked for you)
-    - If the terminal reports an error similar to the below (in addition to a bunch of other text) when you try to run:
-      ```
-      conda : The term 'conda' is not recognized as the name of a cmdlet, function, script file, .....
-      ```
-     - The problem is that the default terminal in VSCode (for windows) is power shell. Power shell doesn't work well with VSCode.
-     - The solution is to change the default terminal in VSCode to 'command prompt' using the following steps:
+  - If the terminal reports an error similar to the below (in addition to a bunch of other text) when you try to run:
+  ```
+  conda : The term 'conda' is not recognized as the name of a cmdlet, function, script file, .....
+  ```
+  - The problem is that the default terminal in VSCode (for windows) is power shell. Power shell doesn't work well with VSCode.
+  - The solution is to change the default terminal in VSCode to 'command prompt' using the following steps:
       1. Hit ctrl+shift+p
-      2. Search for 'Terminal: Select Default Shell', and click
-      3. There should be a few available, including 'bash', 'power shell', and 'command prompt'. Click on 'command prompt'
+      2. Search for `Terminal: Select Default Profile`, and click
+      3. There should be a few available, including 'bash', `power shell`, and `command prompt`. Click on `command prompt`
       4. Exit and re-enter VSCode for the change to stick.
 
-     - That's it! You should be able to download IPyKernal and run your script now.
-     - To further check that 'command prompt' is your default terminal:
-      5. Click in the toolbar View > Terminal
-      6. At the top of the terminal, you should see a drop-down menu. Listed at the very top should be '1: cmd'.
-      7. You can triple check by seeing `conda` and `python` work in the command line. For example, simply type in `conda`, and you'll get back a message starting with `conda is a tool for managing and deploying applications, environments and packages.`.
+  - That's it! You should be able to download IPyKernal and run your script now.
+  - To further check that 'command prompt' is your default terminal:
+      1. Click in the toolbar `View > Terminal`
+      2. At the top of the terminal, you should see a drop-down menu. Listed at the very top should be '1: cmd'.
+      3. You can triple check by seeing `conda` and `python` work in the command line. For example, simply type in `conda`, and you'll get back a message starting with `conda is a tool for managing and deploying applications, environments and packages.`.
      - If something went wrong, you'll find a message such as: `bash: conda: command not found`. Try to start at step 1 again.
 
 ___
