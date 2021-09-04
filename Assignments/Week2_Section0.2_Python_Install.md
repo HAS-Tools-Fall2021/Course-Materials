@@ -104,9 +104,9 @@ See this video for a walkthrough of VSCode setup.
   1. Install extensions: There is a large marketplace of VSCode extensions and a million ways you can customize your environment. For now though we will just start with two extensions. To install and extension go to `view > extensions` on the dropdown menu or choose extensions from your panel on the left. Once there you can search for the extensions you want to install.
     - First search for 'python'. You want the main one that comes up. It looks like this:
     ![](assets/Week2_Section0.2_Python_Install-7427ccbd.png)
-    
+
       - Click `install` to install
-  
+
      - Next search for `Markdown All In One` and install it.  
 
   2. Use `File Open` to open your directory for this class that has all of your repos.  You should see a file list on the left where you can easily explore all of your files now. If it asks you if you trust the authors, say yes.
