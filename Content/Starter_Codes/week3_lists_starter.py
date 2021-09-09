@@ -71,12 +71,14 @@ for i in range(len(flow)):
 # of the index list that was generated
 print(len(ilist))
 
+# Grabbing out the data that met the criteria
+# This  subset of data is just the elements identified
+# in the ilist
+subset = [flow[j] for j in ilist]
+
 # Alternatively I could have  written the for loop I used
 # above to  create ilist like this
 ilist2 = [i for i in range(len(flow)) if flow[i] > 600 and month[i]==7]
 print(len(ilist2))
 
-# Grabbing out the data that met the criteria
-# This  subset of data is just the elements identified
-# in the ilist
-subset = [flow[j] for j in ilist]
+
