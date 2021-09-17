@@ -25,7 +25,7 @@ Check out the following guides in the **cheatsheets** folder to help remind you 
 ___
 ## Training Activities
 - Work through the following sections of Intro to Earth Data Science covering python fundamentals and Python Environments. There are quite a few this week so I recommend you start early. I recommend starting a separate .py file for working through the lessons and typing the commands as you go.
-- **NOTE:** For some of the activities in chapter 17 you will need to install the package **earthpy** you should do this from terminal (either your stand alone terminal application or the terminal in VS code). First make sure that you have your *hastools* environment activated before you do the install by typing `conda activate hastools` installing pip by typing `conda install pip`, then you can install the package by typing `pip install earthpy`.
+- **NOTE:** For some of the activities in chapter 17 you will need to install the package **earthpy** you should do this from terminal (either your stand alone terminal application or the terminal in VS code). First make sure that you have your *hastools* environment activated before you do the install by typing `conda activate hastools`  then you can install the package by typing `conda install -c conda-forge earthpy`.
   - **Chapter 10: Getting started with Python variables and Lists**
     - Lesson 3: [Lists](https://www.earthdatascience.org/courses/intro-to-earth-data-science/python-code-fundamentals/get-started-using-python/lists/)
     - Lesson 4: [Operators](https://www.earthdatascience.org/courses/intro-to-earth-data-science/python-code-fundamentals/get-started-using-python/python-operators/)
