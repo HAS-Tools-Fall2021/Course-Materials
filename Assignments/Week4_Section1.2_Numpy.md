@@ -15,7 +15,7 @@ ___
 <a name="todo"></a>
 ## To Do List
 1. Complete the required training Activities by **next Tuesday**, get through as much as you can before class **Thursday**. Once again there is a lot of content this week so if you can start early  thats a good idea.
-2. Submit your fourth streamflow forecast and assignment by **noon on Monday** following the instructions in the [ Forecast Assignment](#assignment).
+2. Submit your fourth streamflow forecast and assignment by **noon on Monday** following the instructions in the [ Forecast Assignment](#assignment-4-numpy-arrays)s.
 
 ___
 ## Refernces
