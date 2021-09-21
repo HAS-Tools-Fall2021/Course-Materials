@@ -78,8 +78,14 @@ print("this is", np.round(greater_pct,0), "% of the time")
 
 # 4. How does the flow generally change from the first half of
 # September to the second?
-first_half = np.mean(flow_data[(flow_data[:,2] <= 15) & 
-          (flow_data[:,1]==9),3])
+
+index_list = (flow_data[:, 2] <= 15) & (flow_data[:, 1] == 9)
+np.sum(index_list)
+test = flow_data[index_list,3]
+np.mean(test)
+
+first_half = np.mean(flow_data[(flow_data[:,2] <= 15) & (flow_data[:,1]==9),3])
+
 second_half = np.mean(flow_data[(flow_data[:,2] >= 15) & 
           (flow_data[:,1]==9),3])
 print("First half average flows", np.mean(first_half))
