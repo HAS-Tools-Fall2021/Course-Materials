@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 # %%
 # ** MODIFY **
 # Set the file name and path to where you have stored the data
-filename = 'streamflow_week4.txt'
+filename = 'streamflow_week2.txt'
 filepath = os.path.join('../data', filename)
 print(os.getcwd())
 print(filepath)
@@ -71,6 +71,7 @@ print("this is", np.round(greater_pct,0), "% of the time")
 
 greater = np.sum((flow_data[:,3] > prediction) & 
           (flow_data[:,1]==9) & (flow_data[:,0]<=2000))
+          
 greater_pct = greater/np.sum((flow_data[:,1]==9) & 
             (flow_data[:,0]<=2000)) * 100
 print("Flow was greater than predition", greater, "times in or before 2000")
@@ -80,7 +81,6 @@ print("this is", np.round(greater_pct,0), "% of the time")
 # September to the second?
 
 index_list = (flow_data[:, 2] <= 15) & (flow_data[:, 1] == 9)
-np.sum(index_list)
 test = flow_data[index_list,3]
 np.mean(test)
 
