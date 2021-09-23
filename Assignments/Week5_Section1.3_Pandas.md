@@ -80,14 +80,24 @@ In addition to providing a summary of the forecast values you picked and why inc
 
 2. Provide a summary of the flow column including the min, mean, max, standard deviation and quartiles.
 
-3. Provide the same information but on a monthly basis. (Note: you should be able to do this with one or two lines of code)
+3. Provide the same information but on a monthly basis. 
+   - HINT: You should use the `groupby` method to do this combined withe the `describe` method. You should not need a for loop. See [this link](https://www.geeksforgeeks.org/python-pandas-dataframe-groupby/) for an example of how groupby works.
 
 4. Provide a table with the 5 highest and 5 lowest flow
 values for  the period of record. Include the date, month and flow values in your summary.
+  - HINT: I would reccomnd using the `sort_values` and `head` and `tail` methods here. 
 
 5.  Find the highest and lowest flow  values for every month of the year (i.e. you will find 12 maxes and 12 mins) and report back what year these occurred in.
+   - HINT: There are multiple ways to do this but one approach would be the following. 
+     - Initialize some 1D arrays to stor your max and min values
+     - Loop over the months 
+       - For each month grab out just the flow values of that month
+       - Sort them ascending by flow
+       - Grab the year for the first value and save it in your min array
+       - Grab the year for the last value and save that in your max array 
 
 6. Provide a list of historical dates with flows that are within 10% of your week 1 forecast value. If there are none than increase the %10 window until you have at least one other  value and report the date and the new window you used
+   - HINT: You should be able to do this on one line using conditionals
 
 ___
 ## Cheat Sheet Assignment 2: Python basics
