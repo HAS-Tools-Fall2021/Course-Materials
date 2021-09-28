@@ -69,6 +69,8 @@ This week you should submit the following:
 **NOTE**: If you woudl like to insert images into your markdown files I recommend you install the `Markdown Image` app.  To do the go to the `Extensions` botton on the left panel or under the View Menu and search for `Markdown Image` (see the picture below for what it looks like) and click install. You may need to restart vs-code for the app to start working. 
 ![picture 1](../../images/6df9e57f09c9cbc4af896046260514094567ec9fb0be64331b089a9b18b4c2ed.png)  
 
+- If you would like to do this in Atom instead of VS code: I recommend installing the atom package ['markdown-image-assistant'](https://atom.io/packages/markdown-image-assistant#:~:text=atom%2Dmarkdown%2Dimage%2Dassistant,useful%20for%20notetaking%20in%20Atom.) Here are instructions for  [how to install a package in Atom](https://flight-manual.atom.io/using-atom/sections/atom-packages/)
+
 
 ### Assignment questions
 In addition to providing a summary of the forecast values you picked and why include the following analysis in your homework submission. Note that you could answer some of these questions using lists or numpy arrays, however this time you are expected to calculate your answer using the pandas dataframe *data* created in the starter code.
