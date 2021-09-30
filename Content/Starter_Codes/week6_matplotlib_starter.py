@@ -51,7 +51,7 @@ fig.savefig("Observed_Flow.png")
 
 #2. Time series of flow values with the x axis range limited
 fig, ax = plt.subplots()
-ax.plot(data['datetime'], data['flow'], label='full')
+ax.plot(data['datetime'], data['flow'], label='flow')
 ax.set(title="Observed Flow", xlabel="Date", ylabel="Weekly Avg Flow [cfs]",
         yscale='log', xlim=[datetime.date(2000, 1, 26), datetime.date(2014, 2, 1)])
 ax.legend()
@@ -73,8 +73,8 @@ plt.show()
 # 4. Plot the september flows for the last 10 years
 fig, ax = plt.subplots()
 for i in range(2010, 2022):
-        plot_data=data[(data['year']==i)] # and data['month']==9)]
-        ax.plot(plot_data['datetime'], plot_data['flow'], color='green',
+        plot_data=data[(data['year']==i) & (data['month']==9)]
+        ax.plot(plot_data['day'], plot_data['flow'], color='green',
                 linestyle='dashed', label='daily')
 
 #5. scatterplot this years flow vs last years flow for september
@@ -127,4 +127,3 @@ for m in range(9,13):
 plt.show()
 
 
-#Figure out how to do multi conditionals

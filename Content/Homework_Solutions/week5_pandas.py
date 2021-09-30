@@ -52,11 +52,14 @@ data['flow'].quantile([0.25, 0.5, 0.75])
 # 3. Provide the same information but on a monthly basis. (Note: you should
 # be able to do this with one or two lines of code)
 # one line answer
-data_monthly=data.groupby(["month"])[["flow"]].describe()
+data_monthly=data.groupby(["month"])["flow"].describe()
+
+data_monthly['flow']
 
 # two - line answer
 data_monthly2=data.groupby(["month"])
-data_monthly2[["flow"]].describe()
+data_monthly_flow = data_monthly2['flow']
+data_monthly_flow.describe()
 
 
 # 4. Provide a table with the 5 highest and 5 lowest flow 
@@ -72,7 +75,9 @@ print(data[['datetime', 'month', 'flow']].tail(5))
 # and report back what year these occured in. 
 yearmax=np.zeros(12)
 yearmin=np.zeros(12)
+
 for m in range(12):
+        print(m)
         #get the values for that month
         monthdata = data[data['month'] == (m + 1)]
         # sort them 
