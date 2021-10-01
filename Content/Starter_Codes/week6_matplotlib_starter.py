@@ -71,11 +71,18 @@ plt.show()
 
 
 # 4. Plot the september flows for the last 10 years
+#making a color palette to use for plotting (using the viridis one here with 12 colors)
+mypal = sns.color_palette('viridis', 12)
+mypal
+colpick = 0
 fig, ax = plt.subplots()
 for i in range(2010, 2022):
         plot_data=data[(data['year']==i) & (data['month']==9)]
-        ax.plot(plot_data['day'], plot_data['flow'], color='green',
-                linestyle='dashed', label='daily')
+        ax.plot(plot_data['day'], plot_data['flow'],
+                color=mypal[colpick], label=i)
+        ax.set(yscale='log')
+        ax.legend()
+        colpick = colpick+1
 
 #5. scatterplot this years flow vs last years flow for september
 fig, ax = plt.subplots()
