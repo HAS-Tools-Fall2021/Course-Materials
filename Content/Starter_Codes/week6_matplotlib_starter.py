@@ -9,7 +9,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import datetime
-#note you may need to do pip install for sklearn
+# note you may need to do pip install for sklearn
 
 # %%
 # ** MODIFY **
@@ -21,7 +21,7 @@ print(filepath)
 
 
 # %%
-#Read the data into a pandas dataframe
+# Read the data into a pandas dataframe
 data=pd.read_table(filepath, sep = '\t', skiprows=30,
         names=['agency_cd', 'site_no', 'datetime', 'flow', 'code'],
         parse_dates=['datetime']
