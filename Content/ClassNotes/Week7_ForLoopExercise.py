@@ -53,3 +53,18 @@ def day_mean(month, daysinmonth, data):
 
 
 day_mean(2, 28, data)
+
+
+# %%
+
+def calc_median(monthpick, daysinmonth, startyear, data):
+    my_median = np.zeros(daysinmonth)
+    for d in range(daysinmonth):
+        daytemp = d+1
+        tempdata = data[(data['year'] >= startyear) & (
+            data['month'] == monthpick) & (data['day'] == daytemp)]
+        my_median[d] = np.median(tempdata['flow'])
+    return my_median
+
+calc_median(10, 31,2016, data)
+# %%

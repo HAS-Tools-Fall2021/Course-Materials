@@ -21,7 +21,7 @@ print(filepath)
 # no need to worry about how this is being done now we will cover
 # this in later sections. 
 
-#Read the data into a pandas dataframe
+# Read the data into a pandas dataframe
 data=pd.read_table(filepath, sep = '\t', skiprows=30,
         names=['agency_cd', 'site_no', 'datetime', 'flow', 'code']
         )
