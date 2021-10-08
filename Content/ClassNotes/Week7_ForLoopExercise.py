@@ -66,5 +66,6 @@ def calc_median(monthpick, daysinmonth, startyear, data):
         my_median[d] = np.median(tempdata['flow'])
     return my_median
 
-calc_median(10, 31,2016, data)
+favorite_month=10
+calc_median(favorite_month, 31,2016, data)
 # %%

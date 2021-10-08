@@ -123,7 +123,6 @@ For the second part of this assignment you will be working in your partners repo
 ___
 ## Code Review Partners
 ![picture 1](./assets/week7_reviewpartners.png)  
-
 ___
 ## Cheat Sheet Assignment 3: Numpy
 1. Create a cheet sheet on Numpy basics that covers the following: 
