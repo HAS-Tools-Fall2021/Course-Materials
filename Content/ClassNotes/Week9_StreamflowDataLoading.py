@@ -20,8 +20,8 @@ import dataretrieval.nwis as nwis
 # Checkout this link to see all the options https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html
 # We can read csv and excel files directly 
 
-filename = 'streamflow_week1.txt'
-filepath = os.path.join('../../data', filename)
+filename = 'streamflow_week2.txt'
+filepath = os.path.join('../data', filename)
 data = pd.read_table(filepath, sep='\t', skiprows=30,
                      names=['agency_cd', 'site_no',
                             'datetime', 'flow', 'code'],
@@ -46,17 +46,17 @@ url = "https://waterdata.usgs.gov/nwis/dv?cb_00060=on&format=rdb&site_no=0950600
 # Now we can read it with read_table command the same as we did before  
 # (note run this without the skiprows and names to show what those are doing)
 data2 = pd.read_table(url, skiprows=30, names=['agency_cd', 'site_no',
-                                               'datetime', 'flow', 'code'],)
+                                               'datetime', 'flow', 'code'])
 
 
 #Note that we can also use this to make our URL within our code
 site = '09506000'
-start = '1989-01-01'
+start = '1989-01-05'
 end = '2020-10-16'
 url2 = "https://waterdata.usgs.gov/nwis/dv?cb_00060=on&format=rdb&site_no=" + site + \
       "&referred_module=sw&period=&begin_date=" + start + "&end_date=" + end
 data3 = pd.read_table(url2, skiprows=30, names=['agency_cd', 'site_no',
-                                               'datetime', 'flow', 'code'],)
+                                               'datetime', 'flow', 'code'])
 
 # What we are doing here is actually just interacting with the USGS's
 # Rest API:
@@ -78,6 +78,39 @@ obs_day = nwis.get_record(sites=station_id, service='dv',
 #Lest see what the NWIS package is doing!
 # From terminal type the following to see where your evn lives
 # conda env list 
-# your packages will be within this folder in /lib/python/sitepackages
+# your packages will be within this folder in /lib/python/site-packages
 # add the folder for this package to your vs code env and you can see 
 # what the package is doing
+
+# %%
+#Examples of loading additional stream gauge data
+
+#Gigi -- Colorado river Grand Canyon 
+url = "https://waterdata.usgs.gov/nwis/dv?cb_00060=on&format=rdb&site_no=09402500&referred_module=sw&period=&begin_date=2000-01-01&end_date=2021-10-18"
+data = pd.read_table(url, skiprows=30, names=['agency_cd', 'site_no',
+                                              'datetime', 'flow', 'code'],
+                     parse_dates=['datetime'])
+
+data['year'] = pd.DatetimeIndex(data['datetime']).year
+data['month'] = pd.DatetimeIndex(data['datetime']).month
+data['day'] = pd.DatetimeIndex(data['datetime']).day
+data['dayofweek'] = pd.DatetimeIndex(data['datetime']).dayofweek
+
+datai = data.copy()
+datai = datai.set_index('datetime')
+
+
+# Connal
+station_id = "09379200"
+start_date = '1989-01-01'
+stop_date = '2021-10-17'
+obs_day = nwis.get_record(sites=station_id, service='dv',
+                          start=start_date, end=stop_date, parameterCd='00060')
+
+# Xiang - Wet beaver Creek near rimrock
+station_id = '09505200'
+start_formatted = '1989-01-01'
+stop_formatted = '2021-10-19'
+data_rimrock = nwis.get_record(sites=station_id, service='dv',
+                               start=start_formatted, end=stop_formatted,
+                               parameterCd='00060')
