@@ -72,8 +72,8 @@ plt.show()
 
 
 # Example reading in a geodataframe
-fiona.listlayers(file)
 file = os.path.join('..', '..', '..', '..', 'data/WBD_15_HU2_GDB', 'WBD_15_HU2_GDB.gdb')
+fiona.listlayers(file)
 HUC6 = gpd.read_file(file, layer="WBDHU6")
 
 
@@ -163,8 +163,6 @@ HUC6_project.boundary.plot(ax=ax, color=None,
 # Adding a basemap:
 # Some other basemap choices:
 #  https://towardsdatascience.com/free-base-maps-for-static-maps-using-geopandas-and-contextily-cd4844ff82e1
-HUC6_project = HUC6.to_crs(gages_AZ.crs)
-
 
 # Now plot again
 fig, ax = plt.subplots(figsize=(5, 5))
@@ -174,4 +172,4 @@ gages_AZ.plot(column='DRAIN_SQKM', categorical=False,
 points_project.plot(ax=ax, color='black', marker='*')
 HUC6_project.boundary.plot(ax=ax, color=None,
                            edgecolor='black', linewidth=1)
-ctx.add_basemap(ax)
+ctx.add_basemap(ax, crs=gages_AZ.crs)
