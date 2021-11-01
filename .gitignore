@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 
 WBD_15_HU2_GDB.jpg
+
+.DS_Store
