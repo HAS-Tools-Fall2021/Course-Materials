@@ -75,10 +75,10 @@ In addition to historical reanalysis data we can also access forecast data throu
 
 ___
 <a name="assignment"></a>
-## Assignment 12: Reading NetCDF data
+## Assignment 11: Reading NetCDF data
 This week your assignment is to add one additional dataset to your analysis that comes from a NetCDF. The dataset can be whatever you choose but it must be read from a NetCDF file and it can't be exactly the example I provided in the starter code.
 
-There are two starer codes for this week `Week12_Forecast_Netcdf_starter.py` and `Week12_Reanalysis_Netcdf_starter.py` You can use these as your starting points showing you how to extract data  from different NetCDF files. The netcdf files referenced by these scripts are included in a `data` folder in the `start_codes` folder.
+There are two starer codes for this week `Week11_Forecast_Netcdf_starter.py` and `Week11_Reanalysis_Netcdf_starter.py` You can use these as your starting points showing you how to extract data  from different NetCDF files. The netcdf files referenced by these scripts are included in a `data` folder in the `start_codes` folder.
 
 Note that one of the scripts includes a map at the bottom but you are not required to do mapping this week if you don't want. See the data access instructions above for instructions on accessing the two datasets used in the
 
@@ -96,9 +96,12 @@ Note that one of the scripts includes a map at the bottom but you are not requir
 
 #### Submission Instructions
 - Submit your forecast to the forecast competition following normal procedures.
-- This week you should submit 2 things in your `submission` folder
-  1. `Latname_HW12.py`: Your python script with your full analysis
-  2. `Lastname_HW12.md`: Your written assignment
+- This week you should submit 3 things:
+  In the `forecast_submission` folder of your `homework` repo submit: 
+    1. `Latname_HW11.py`: Your python script with your full analysis
+    2. `Lastname_HW11.md`: Your written assignment
+  Then:
+    3.  Submit your map and a summary of your dataset to the class slide deck our slide deck for this week [here](https://docs.google.com/presentation/d/1RxP4o1Zu3iyGdzdUJ7uAO-5mapKetGfk1cWS53qQ3OQ/edit?usp=sharing)
 
 #### Coding assignment
 - As noted above you need to add an additional dataset to your analysis. This can be a historical time series that you add to your regression model or it can be a single forecast value that you incorporate into your predictions.
@@ -114,4 +117,4 @@ Your submission folder should include a `Readme.md` file that contains the follo
   - Where did you get the data from?
   - What was your approach to extracting and aggregating it into something useful to you?
 3. A plot of the dataset you added. This can be a timeseries, map, histogram or any other plot that you think is a good summary of what you added.
-4. Finally add your plot and a  brief summary of what you did to our slide deck for this week [here](https://docs.google.com/presentation/d/1aczDtIH-v7jttA3_CvKQBSiWCfeEyV6LnpbiYbzzPaY/edit?usp=sharing)
+4. Finally add your plot and a  brief summary of what you did to our slide deck for this week [here](https://docs.google.com/presentation/d/1RxP4o1Zu3iyGdzdUJ7uAO-5mapKetGfk1cWS53qQ3OQ/edit?usp=sharing)
