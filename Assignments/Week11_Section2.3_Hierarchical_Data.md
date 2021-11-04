@@ -44,10 +44,10 @@ NOTE: For downloads I suggest a bounding box of:
 A wide array of gridded climate data is available through the NOAA: Physical Sciences Lab. You can learn more about that [here](https://psl.noaa.gov/data/gridded_help/howtosub.html). We are going to download some NCEP re-analysis data in this example but you can download other datasets if you would like.
 - Go to the [search page](https://psl.noaa.gov/cgi-bin/db_search/SearchMenus.pl) and select `NCEP Reanalysis Daily Averages` and `Precipitation Rate`
 - Click `make a subset` and input the spatial region and time period you are interested in. Given the size of the dataset I suggest you limit your time period to after 2000.
-- Click `create subset` and when you get to the page with the graph select `FTP the data` and finally select `FTP a copy of the data` to start the download you should see a nc file downloaded for you (note the file size limit, if you exceed this you might need to select a smaller subset)
+- Click `create subset` and when you get to the page with the graph select `Download the data` and finally select `Download a copy of the file` to start the download you should see a nc file downloaded for you (note the file size limit, if you exceed this you might need to select a smaller subset)
 
 
-### 2. Precipitation forecast data
+### 2. Historical precipitation forecast data
 In addition to historical reanalysis data we can also access forecast data through the UCAR research data archive:
 - If you don't have one already, create an account on the [Research Data Archive](https://rda.ucar.edu/index.html?hash=data_user&action=register) (NOTE: It may take several hours and up to 2 business days for your registration to be accepted so plan accordingly)
 

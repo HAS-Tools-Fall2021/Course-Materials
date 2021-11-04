@@ -17,7 +17,6 @@ from netCDF4 import Dataset
 #NOTE To install the packages you need you should use the followin line:
 # conda install xarray dask netCDF4 bottleneck
 
-
 # %%
 # Net CDF file historical time series
 # https://towardsdatascience.com/handling-netcdf-files-using-xarray-for-absolute-beginners-111a8ab4463f
@@ -63,9 +62,9 @@ print("Long, Lat values:", lon, lat)
 one_point = dataset["prate"].sel(lat=lat,lon=lon)
 one_point.shape
 
+
 # use x-array to plot timeseries
 one_point.plot.line()
-precip_val = one_point.values
 
 # Make a nicer timeseries plot
 f, ax = plt.subplots(figsize=(12, 6))
@@ -77,8 +76,11 @@ one_point.plot.line(hue='lat',
                     markeredgecolor="purple")
 ax.set(title="Time Series For a Single Lat / Lon Location")
 
-#Conver to dataframe
+#Convert to dataframe
 one_point_df = one_point.to_dataframe()
+
+# Strip out just the values
+precip_val = one_point.values
 
 # %%
 # Making a spatial map of one point in time
@@ -91,3 +93,5 @@ timeslice = dataset["prate"].sel(
 timeslice.plot()
 
 #from here you can do anything you want the same way we have when working with other dataframes
+
+# %%

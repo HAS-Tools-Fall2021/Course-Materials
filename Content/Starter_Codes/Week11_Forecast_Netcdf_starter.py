@@ -2,6 +2,7 @@
 # see the assignment instructions for how to do this
 # %%
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import xarray as xr
 import rioxarray
@@ -10,15 +11,16 @@ import cartopy.feature as cfeature
 import seaborn as sns
 import geopandas as gpd
 import fiona
-import shapely
+import shapely 
 from netCDF4 import Dataset
+import matplotlib as mpl
 
 #NOTE To install the packages you need you should use the followin line:
 # conda install xarray dask netCDF4 bottleneck
 
 # %%
 # reading in the basin file for mapping
-basin_file = os.path.join('../../../data/Shape', 'WBDHU8.shp')
+basin_file = os.path.join('..', '..', '..', 'data/Shape', 'WBDHU8.shp')
 HUC8 = gpd.read_file(basin_file)
 
 #Check the type and see the list of layers
@@ -28,9 +30,9 @@ HUC8.head()
 # %%
 # Net CDF file of precip forecast
 # https://towardsdatascience.com/handling-netcdf-files-using-xarray-for-absolute-beginners-111a8ab4463f
-data_path = os.path.join('data',
-                         'gfs.0p25.2020110712.f024.grib2.condon456696.nc')
-
+data_path = os.path.join('..', '..', '..', 'data',
+                         'gfs.0p25.2020110706.f024.grib2.condon456696.nc')
+                          
 # Read in the dataset as an x-array
 dataset = xr.open_dataset(data_path)
 # look at it
@@ -99,7 +101,7 @@ precip = one_time.values
 # set up colormap, levels and colorbar intervals
 cmap = plt.get_cmap('Blues')  # pick the desired colormap,
 levs = np.arange(0, 5, 0.25)   # sensible levels,
-norm = BoundaryNorm(levs, ncolors=cmap.N, clip=True)
+norm = mpl.colors.BoundaryNorm(levs, ncolors=cmap.N, clip=True)
 
 
 projection = ccrs.PlateCarree()
@@ -107,25 +109,7 @@ projection = ccrs.PlateCarree()
 # start a figure named fig, set axis name, dimesions of fig, and projection
 fig, ax = plt.subplots(1, 1, figsize=(6, 6), subplot_kw={
                        'projection': projection})
-
-# add .shp file of the catchment
-shape_feature = ShapelyFeature(Reader(basin_file).geometries(),
-                               projection, edgecolor='black', linewidth=1.5, facecolor='none')
-ax.add_feature(shape_feature)
-
-
-# draw mesh of data (no contouring with low res data)
-cs = ax.pcolormesh(lon, lat, precip,
-                   transform=projection,
-                   cmap=cmap, norm=norm)
-
-divider = make_axes_locatable(ax)
-ax_cb = divider.new_vertical(size="5%", pad=-5.15, axes_class=plt.Axes)
-fig.add_axes(ax_cb)
-cbar = plt.colorbar(cs, cax=ax_cb, orientation='horizontal', extend='max')
-cbar.ax.set_xticklabels(cbar.ax.get_xticklabels(), rotation=30)
-cbar.set_label('GFS forecast Accumulated Precipitation [$\\mathrm{mm}]$ \n \
-                Basin Mean = '+str(np.around(np.mean(precip), 2))+' [$\mathrm{mm}]$', size=10)
+cs = ax.pcolormesh(lon, lat, precip, transform=projection, cmap=cmap, norm=norm)
 
 # crop extent of map to lat/lon of data
 central_lon, central_lat = np.median(lon), np.median(lat)
@@ -147,6 +131,6 @@ ax.text(-112.5, 34.42, 'Prescott', fontweight='bold', transform=projection)
 ax.plot(-111.6513, 35.1983, 'ko', markersize=6, transform=projection)
 ax.text(-111.62, 35.13, 'Flagstaff', fontweight='bold', transform=projection)
 
-plotfile = 'forecast_precip_accu.png'
-sf = fig.savefig(plotfile, dpi=300, bbox_inches='tight')
+#plotfile = 'forecast_precip_accu.png'
+#sf = fig.savefig(plotfile, dpi=300, bbox_inches='tight')
 plt.show()
