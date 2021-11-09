@@ -23,7 +23,7 @@ ___
 
 ___
 <a name="assignment"></a>
-## Assignment 11: Team Forecasts (Due Monday noon)
+## Assignment 12: Team Forecasts (Due Monday noon)
 This week you will be submitting team forecasts. You will still submit your forecast numbers to your individual CSV but your submission MUST be the same as the rest of your team. Any submissions that don't match the team will be disqualified.
 
 #### Forecast Rules for this week:
@@ -36,9 +36,9 @@ This week you will be submitting team forecasts. You will still submit your fore
 - **Every member** of a team should submit their own forecast numbers in their regular  CSV but they must match their team's forecast numbers.
 
 #### Submission Instructions
-- Your team  should designate one person's repo to be the 'master' repo for your group. In the selected 'master' repo you should add a folder in the submissions folder called  `team_forecast` this should contain your groups final script and a markdown file. `GroupName_Forecast.py` and 'ReadMe.py'.
+- Your team  should designate one person's repo to be the 'master' repo for your group. In the selected 'master' repo you should add a folder in the submissions folder called  `team_forecast` this should contain your groups final script and a markdown file. `GroupName_Forecast.py` and 'ReadMe.md'.
 
-- If your repo is **not** the master repo then include a file called 'lastnam_HW11.md' and just include a note in that markdown noting  what team you are on and what repo I should look in for your actual submission.
+- If your repo is **not** the master repo then include a file called `lastname_HW12.md` and just include a note in that markdown noting  what team you are on and what repo I should look in for your actual submission.
 
 
 #### Code Requirements:
@@ -53,4 +53,4 @@ As noted above you  will be submitting just one markdown for your team. Your mar
 1.  The name of your team and the name of your team members
 2.  The one and two week forecast streamflow values 
 3.  A brief summary of your collaboration. What did each team member bring to the table, who did what and how did you decide how to combine things?
-4.  A summary of your forecast. This should be written as a narrative summary without any blocks of code.  It should summarize the inputs and approach used and must include at least 1 map and one graph. Only include graphs that you talk about in your narrative.   
+4.  A summary of your forecast. This should be written as a narrative summary without any blocks of code.  It should summarize the inputs and approach used and must include at least 1 map and 1 graph. Only include graphs that you talk about in your narrative.   
