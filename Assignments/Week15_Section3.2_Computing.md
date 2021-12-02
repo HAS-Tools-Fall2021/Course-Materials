@@ -71,18 +71,23 @@ Then use `va` to see what group you are a part of and what your allocation is.
   - Create a run name and use lecondon for your group name
   - set your run time to 5  minutes
   - Create a new file in the folder with your python script (e.g. `run_python.sh`) and copy and paste the resulting bash file lines into that files
-  - Add the following two lines to the bottom of the  script:
+  - Add the following four lines to the bottom of the  script:
   ```
+  module load python/3.8
+  source ~/mypyenv/bin/activate
+
   cd /path/to/HAS_Tools
   python test.py
   ```
   - Note 1: Replace `/path/to` with the path to your HAS tools directory
   - Note 2: If the job won't submit you might need to change `cputime` to `cput`.
-  - Note 3: There is an example pbs script in the starter code for this week. You can also upload that as a starting place.
 
-7. Submit your job like this: `qsub run_python.sh`
+7. Submit your job like this: `sbatch run_python.sh`
 
-8. check on the status of your job `qstat -u yournetid` or you can just check on your one job like this: `qstat -u yourjob#`
+8. check on the status of your job. You can do this one of two ways: 
+- From terminal type:  `squeue -u yournetid` or you can just check on your one job like this: `squeue -u yourjob#`
+- Or from on demand go to `jobs` and `active jobs` to see a list of your jobs that are queued, complete or running. 
+NOTE: To see more slurm commands you can refer to the the table [here](https://public.confluence.arizona.edu/display/UAHPC/Running+Jobs+with+SLURM)
 
 9. Use vi to look at the outputs of your job in the two files that are created `runame.orunnumber` and `runname.erunnumber`
 
@@ -96,11 +101,16 @@ This week we are going to voyage off our our laptops. Your job is to make your s
 **Part 1: Run your forecast on Puma using a submit script**
 1. On your laptop modify your python script so that it will not need to be run interactively (i.e. so that you can run it from command line like this `python myscrip.py` and it will print out and save everything that you want). Also make sure it is setup so that any file it needs is in the same directory to make paths easier. You can test this by opening a terminal from within vscode and trying to run your script from there.  You can also simplify your script so that you don't need as many packages if you would like. No maps are required for this weeks submission.
 
-2. Setup your environment and make a directory to work in on UA HPC see the instructions above.
+2. Setup your environment and make a directory to work in on UA HPC see the instructions above (this should already be done from class)
 
-3. Upload your script and inputs, create a submissions script and submit a job to generate your forecast.
+3. Upload your script and inputs to your HAS_Tools folder on UA_HPC
 
-4. Download your output file and pbs script for submission.
+4. Modify your job submisison script so that rather than running hello_world.py it runs your homework script.  This should be the only like you need to change in this script. If your script takes longer than 5 mintues to run though you might also want to request more time.  
+
+5. Submit your job from the terminal: 
+`sbatch run_python.sh`
+
+6. Download your output file and pbs script for submission.
 
 **Part 2: Run your forecast using an interactive session jupyter notebook**
 - Next try converting your script to a jupyter notebook on your laptop
