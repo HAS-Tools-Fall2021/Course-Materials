@@ -121,12 +121,10 @@ This week we are going to voyage off our our laptops. Your job is to make your s
 - If you ahve extra time feel free to try running your script on google co-lab too!
 
 **Part 3: Reflection**
-
 With your submission please provide a readme that answers the following questions:
 
 1. What resources did you request on Puma? How long did you wait in the queue for your job to run and how long did it take to run?
 2. What was the most confusing part to you about setting up and running your job on Puma?
-4. Where else did you run your job? How did the setup compare to your run on Puma?
 3. What questions do you still have after doing this?
 
 
