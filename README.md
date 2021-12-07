@@ -26,8 +26,6 @@ ___
 ## Places to get help and build your skills after this class
 #### Places to ask for Help
 -	[Coffee and Code](https://datascience.arizona.edu/events/300-coffee-code)
--	[Hacky Hour](https://researchbazaar.arizona.edu/)
--	[Python Meetup](https://www.meetup.com/Tucson-Python-Meetup/)
 - [Library Python programming drop in hours](https://new.library.arizona.edu/events/python-programming-drop-hours)
 - [HPC help Desk](https://public.confluence.arizona.edu/display/UAHPC/Getting+Help)
 
